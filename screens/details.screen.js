@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, SafeAreaView } from "react-native";
 import { Button } from "react-native-paper";
 
 export const Details = ({ details, onClear }) => {
     const{ name, stack, displayName, email } = details;
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <Text style={styles.title}>Zuri Assignment</Text>
             <Text style={styles.text}> Your name is {name}</Text>
             <Text style={styles.text}> Your stack is {stack}</Text>
@@ -21,7 +21,7 @@ export const Details = ({ details, onClear }) => {
             >
             Back
         </Button>          
-        </View>
+        </SafeAreaView>
     )
 }          
 
